@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .main {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      width: 320px;
+    }
+
+    .main h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .input {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+    }
+
+    .input label {
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    .input input {
+      padding: 8px 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    .input input:focus {
+      border-color: #007bff;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #007bff;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    #result {
+      margin-top: 20px;
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      font-size: 14px;
+      color: #333;
+    }
+
+    #result div {
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <h2>Student Info</h2>
+
+    <div class="input">
+      <label for="name">Enter name</label>
+      <input type="text" id="name">
+    </div>
+
+    <div class="input">
+      <label for="father">Enter father name</label>
+      <input type="text" id="father">
+    </div>
+
+    <div class="input">
+      <label for="college">Enter college name</label>
+      <input type="text" id="college">
+    </div>
+
+    <button onclick="display()">Display</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const name = document.getElementById('name');
+    const fatherName = document.getElementById('father');
+    const clgName = document.getElementById('college');
+
+    function display() {
+      let name1 = name.value;
+      let fatherName1 = fatherName.value;
+      let clgName1 = clgName.value;
+
+      document.getElementById("result").innerHTML =
+        '<div><strong>Name:</strong> ' + name1 + '</div>' +
+        '<div><strong>Father Name:</strong> ' + fatherName1 + '</div>' +
+        '<div><strong>College:</strong> ' + clgName1 + '</div>';
+    }
+  </script>
+</body>
+</html>
