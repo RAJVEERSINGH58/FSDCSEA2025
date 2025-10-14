@@ -1,0 +1,30 @@
+npm inti -y
+
+npm i -D vite
+
+package.json	package-lock.json
+Purpose	Describes your project — lists dependencies, scripts, metadata, etc.	Locks the exact versions of all dependencies and sub-dependencies.
+
+Use in deployment
+
+Tells npm what to install.
+Ensures everyone installs the same versions.
+
+"dev" : "vite",
+
+npm run dev
+
+
+create index.html and app.jsx
+
+from react cdn add these two script file
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  add App.jsx script in index.html
+
+  in html create a div id parent
+  get element parent
+
+  in script type="text/babel" for app.js not jsx
+
+
